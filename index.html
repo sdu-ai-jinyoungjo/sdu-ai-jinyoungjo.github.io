@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시작 페이지</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <!-- 서울디지털대학교 홈페이지로 연결되는 로고 -->
+    <a class="logo" href="https://www.sdu.ac.kr" target="_blank" rel="noopener">
+      <span class="logo-mark">SDU</span>
+      <span class="logo-text">서울디지털대학교</span>
+    </a>
+
+    <!-- 오늘의 날씨 (서울, 제주) -->
+    <div class="weather">
+      <div class="weather-chip" id="weather-seoul">서울: 불러오는 중…</div>
+      <div class="weather-chip" id="weather-jeju">제주: 불러오는 중…</div>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- 구글 검색창 -->
+    <form class="search-form" id="search-form" action="https://www.google.com/search" method="get">
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        </svg>
+        <input class="search-input" id="search-input" type="text" name="q"
+               placeholder="Google 검색" autocomplete="off" autofocus>
+      </div>
+      <div class="search-buttons">
+        <button class="search-button" type="submit">Google 검색</button>
+        <button class="search-button" type="submit" name="btnI" value="1">I'm Feeling Lucky</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- 오늘의 명언 -->
+  <footer class="footer">
+    <p class="quote" id="quote"></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

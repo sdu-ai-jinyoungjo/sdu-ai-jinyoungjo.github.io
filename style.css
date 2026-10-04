@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #fff;
+  color: #202124;
+  font-family: Arial, "Malgun Gothic", "맑은 고딕", sans-serif;
+}
+
+/* 상단: 로고 + 날씨 */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  color: #3c4043;
+  text-decoration: none;
+}
+
+.logo-mark {
+  color: #1a73e8;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.logo-text {
+  font-size: 14px;
+}
+
+.logo:hover .logo-text {
+  text-decoration: underline;
+}
+
+.weather {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.weather-chip {
+  padding: 7px 12px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.1);
+  color: #3c4043;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* 가운데: 구글 검색 */
+.main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px 15vh;
+}
+
+.search-form {
+  width: 100%;
+  max-width: 584px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  background: #fff;
+}
+
+.search-box:hover,
+.search-box:focus-within {
+  border-color: rgba(223, 225, 229, 0);
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.search-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  fill: #9aa0a6;
+}
+
+.search-input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #202124;
+  font-size: 16px;
+}
+
+.search-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.search-button {
+  height: 36px;
+  padding: 0 16px;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  background: #f8f9fa;
+  color: #3c4043;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  border-color: #dadce0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  color: #202124;
+}
+
+/* 하단: 명언 */
+.footer {
+  padding: 15px 24px;
+  border-top: 1px solid #dadce0;
+  background: #f2f2f2;
+  text-align: center;
+}
+
+.quote {
+  color: #70757a;
+  font-size: 14px;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .header {
+    justify-content: center;
+  }
+
+  .weather {
+    justify-content: center;
+  }
+}
